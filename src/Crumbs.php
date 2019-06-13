@@ -178,6 +178,24 @@ Class Crumbs {
             $this->add_breadcrumb(get_the_title());
         }
 
+        if(is_singular('feature')) {
+
+            // get ancestors and add them to the trail
+            $ancestors = get_ancestors(get_the_ID(), 'page');
+
+            $ancestors = array_reverse($ancestors);
+
+            if(count($ancestors) > 0) {
+                foreach($ancestors as $page_id) {
+                    $this->add_breadcrumb(get_the_title($page_id), get_permalink($page_id));
+                }
+            }
+
+            // get this page title
+            $this->add_breadcrumb(get_the_title());
+        }
+
+
         // if is blog archive
         if(is_home()) {
             $this->add_breadcrumb($this->options['blog']);
@@ -236,7 +254,7 @@ Class Crumbs {
 
 
         // post types
-        if(!is_singular('page') && !is_singular('post')) {
+        if(!is_singular('page') && !is_singular('post') && !is_singular('feature')) {
 
             if(is_post_type_archive()) {
                 $this->add_breadcrumb(post_type_archive_title('', false));
