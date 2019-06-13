@@ -1,13 +1,13 @@
 {
-    "name": "jjgrainger/wp-crumbs",
-    "description": "Simple Wordpress Breadcrumbs.",
-    "homepage": "https://github.com/jjgrainger/wp-crumbs",
+    "name": "PCCLibrary/wp-crumbs",
+    "description": "Simple Wordpress Breadcrumbs updated from jjgrainger",
+    "homepage": "https://github.com/PCCLibrary/wp-crumbs",
     "license": "MIT",
     "authors": [
         {
-            "name": "Joe Grainger",
-            "email": "hello@joegrainger.co.uk",
-            "homepage": "http://jjgrainger.co.uk"
+            "name": "Gustavo Lanzas",
+            "email": "gustavo.lanzas@gmail.com",
+            "homepage": "www.gustavolanzas.com"
         }
     ],
     "minimum-stability": "dev",
